@@ -53,14 +53,14 @@ import ViewBox  from './components/PercentView'
 
 
   const App = () => {
-    let cislo: number = 20
+    let cislo: number = 34;
     cislo -= 1
 
   return (  //<> </> aby bylo možný víc komponentů
     <> 
-      <ViewBox value={50} max={100} makeColor={(p) => `rgb(${p*2*100}, 255, 255)`}/>
-      <ViewBox value={50} max={200} makeColor={(p) => `rgb(${p*2*100}, 255, 255)`}/>
-      <ViewBox value={50} max={300} makeColor={(p) => `rgb(${p*2*100}, 255, 255)`}/>
+      <ViewBox value={cislo + 1} max={100} makeColor={(p) => "green"}/>
+      <ViewBox value={cislo + 1} max={200} makeColor={(p) => "blue"}/>
+      <ViewBox value={200} max={200} makeColor={(p) => `hls(10, 100%, ${p*50}%)`}/>
       <p>jnuhu</p>
     </>
   )
